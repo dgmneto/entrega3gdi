@@ -10,18 +10,21 @@ CREATE TABLE Pessoa (
 CREATE TABLE Motorista (
     cpf_mot VARCHAR2(11),
     cnh VARCHAR2(11),
-    PRIMARY KEY (cpf_mot) REFERENCES Pessoa(cpf)
+    PRIMARY KEY (cpf_mot),
+    FOREIGN KEY (cpf_mot) REFERENCES Pessoa(cpf)
 );
 
 CREATE TABLE Cliente (
     cpf_cliente VARCHAR2(11),
-    PRIMARY KEY (cpf_cliente) REFERENCES Pessoa(cpf)
+    PRIMARY KEY (cpf_cliente), 
+    FOREIGN KEY (cpf_cliente) REFERENCES Pessoa(cpf)
 );
 
 CREATE TABLE Funcionario (
     cpf_func VARCHAR2(11), 
     cpf_supv VARCHAR2(11), --supervisor
-    PRIMARY KEY (cpf_func) REFERENCES Pessoa(cpf),
+    PRIMARY KEY (cpf_func)
+    FOREIGN KEY (cpf_func) REFERENCES Pessoa(cpf),
     FOREIGN KEY (cpf_supv) REFERENCES Funcionario(cpf_func)
 );
 
