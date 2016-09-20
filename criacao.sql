@@ -99,3 +99,38 @@ CREATE TABLE Cremacao (
     FOREIGN KEY (id_funeral) REFERENCES Funeral (id)
 );
 
+CREATE TABLE Produto (
+    num_serie VARCHAR2(100),
+    preco DECIMAL(6, 2),
+    cor VARCHAR2(30),
+    fabricante VARCHAR2(100),
+    PRIMARY KEY (num_serie)
+);
+
+CREATE TABLE Urna (
+    num_serie VARCHAR2(100),
+    peso DECIMAL(6, 2),
+    volume DECIMAL(6, 2),
+    id_funeral INTEGER,
+    PRIMARY KEY (num_serie),
+    FOREIGN KEY (num_serie) REFERENCES Produto(num_serie),
+    FOREIGN KEY (id_funeral) REFERENCES Cremacao(id_funeral)
+);
+
+CREATE TABLE Caixao (
+    num_serie VARCHAR2(100),
+    altura DECIMAL(6, 2),
+    largura DECIMAL(6, 2),
+    revestimento VARCHAR2(100),
+    id_funeral INTEGER,
+    PRIMARY KEY (num_serie),
+    FOREIGN KEY (num_serie) REFERENCES Produto(num_serie),
+    FOREIGN KEY (id_funeral) REFERENCES Enterro(id_funeral)
+);
+
+CREATE TABLE Telefones (
+    numero VARCHAR2(100),
+    cpf_pessoa VARCHAR2(11),
+    PRIMARY KEY (numero),
+    FOREIGN KEY (cpf_pessoa) REFERENCES Pessoa(cpf)
+);
