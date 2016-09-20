@@ -245,28 +245,28 @@ INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1252', 100.20, 
 INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1253', 101.20, 'Preto', 'Faurtil');
 
 -- Urna
-INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1234', 1000.00, 10.00, 01);
-INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1235', 1250.10, 12.10, 02);
-INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1236', 1459.20, 14.60, 03);
-INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1237', 1700.30, 16.90, 04);
-INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1238', 2000.40, 18.70, 05);
-INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1239', 2200.50, 20.20, 06);
-INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1240', 2321.60, 22.50, 07);
-INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1241', 2654.70, 25.90, 08);
-INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1242', 2858.80, 28.00, 09);
-INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1243', 3002.90, 30.20, 10);
+INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1234', 1000.00, 10.00, 11);
+INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1235', 1250.10, 12.10, 12);
+INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1236', 1459.20, 14.60, 13);
+INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1237', 1700.30, 16.90, 14);
+INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1238', 2000.40, 18.70, 15);
+INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1239', 2200.50, 20.20, 16);
+INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1240', 2321.60, 22.50, 17);
+INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1241', 2654.70, 25.90, 18);
+INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1242', 2858.80, 28.00, 19);
+INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1243', 3002.90, 30.20, 20);
 
 -- Caixao
-INSERT INTO Caixao (num_serie, altura, largura, revestimento, id_funeral) VALUES ('1244', 1.50, 0.30, 'Verniz', 11);
-INSERT INTO Caixao (num_serie, altura, largura, revestimento, id_funeral) VALUES ('1245', 1.55, 0.34, 'Couro', 12);
-INSERT INTO Caixao (num_serie, altura, largura, revestimento, id_funeral) VALUES ('1246', 1.60, 0.39, 'Espuma', 13);
-INSERT INTO Caixao (num_serie, altura, largura, revestimento, id_funeral) VALUES ('1247', 1.65, 0.42, 'Verniz', 14);
-INSERT INTO Caixao (num_serie, altura, largura, revestimento, id_funeral) VALUES ('1248', 1.70, 0.46, 'Couro', 15);
-INSERT INTO Caixao (num_serie, altura, largura, revestimento, id_funeral) VALUES ('1249', 1.80, 0.52, 'Espuma', 16);
-INSERT INTO Caixao (num_serie, altura, largura, revestimento, id_funeral) VALUES ('1250', 1.85, 0.55, 'Verniz', 17);
-INSERT INTO Caixao (num_serie, altura, largura, revestimento, id_funeral) VALUES ('1251', 1.95, 0.58, 'Couro', 18);
-INSERT INTO Caixao (num_serie, altura, largura, revestimento, id_funeral) VALUES ('1252', 2.05, 0.60, 'Espuma', 19);
-INSERT INTO Caixao (num_serie, altura, largura, revestimento, id_funeral) VALUES ('1253', 2.20, 0.62, 'Verniz', 20);
+INSERT INTO Caixao (num_serie, altura, largura, revestimento, id_funeral) VALUES ('1244', 1.50, 0.30, 'Verniz', 01);
+INSERT INTO Caixao (num_serie, altura, largura, revestimento, id_funeral) VALUES ('1245', 1.55, 0.34, 'Couro', 02);
+INSERT INTO Caixao (num_serie, altura, largura, revestimento, id_funeral) VALUES ('1246', 1.60, 0.39, 'Espuma', 03);
+INSERT INTO Caixao (num_serie, altura, largura, revestimento, id_funeral) VALUES ('1247', 1.65, 0.42, 'Verniz', 04);
+INSERT INTO Caixao (num_serie, altura, largura, revestimento, id_funeral) VALUES ('1248', 1.70, 0.46, 'Couro', 05);
+INSERT INTO Caixao (num_serie, altura, largura, revestimento, id_funeral) VALUES ('1249', 1.80, 0.52, 'Espuma', 06);
+INSERT INTO Caixao (num_serie, altura, largura, revestimento, id_funeral) VALUES ('1250', 1.85, 0.55, 'Verniz', 07);
+INSERT INTO Caixao (num_serie, altura, largura, revestimento, id_funeral) VALUES ('1251', 1.95, 0.58, 'Couro', 08);
+INSERT INTO Caixao (num_serie, altura, largura, revestimento, id_funeral) VALUES ('1252', 2.05, 0.60, 'Espuma', 09);
+INSERT INTO Caixao (num_serie, altura, largura, revestimento, id_funeral) VALUES ('1253', 2.20, 0.62, 'Verniz', 10);
 
 -- Telefones
 INSERT INTO Telefones (numero, cpf_pessoa) VALUES ('99916512', '12323456352');
