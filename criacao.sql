@@ -4,7 +4,7 @@ CREATE TABLE Pessoa (
     nome_familia VARCHAR2(20),
     data_nasc DATE,
     rg VARCHAR2(9),
-    PRIMARY KEY(cpf)
+    PRIMARY KEY (cpf)
 );
 
 CREATE TABLE Motorista (
@@ -23,7 +23,7 @@ CREATE TABLE Cliente (
 CREATE TABLE Funcionario (
     cpf_func VARCHAR2(11), 
     cpf_supv VARCHAR2(11), --supervisor
-    PRIMARY KEY (cpf_func)
+    PRIMARY KEY (cpf_func),
     FOREIGN KEY (cpf_func) REFERENCES Pessoa(cpf),
     FOREIGN KEY (cpf_supv) REFERENCES Funcionario(cpf_func)
 );
@@ -52,7 +52,7 @@ CREATE TABLE Falecido (
 
 CREATE TABLE Carro (
     placa VARCHAR2(7),
-    ano_fab TIMESTAMP,
+    ano_fab DATE,
     fabricante VARCHAR2(20),
     modelo VARCHAR2(15),
     cor VARCHAR2(10),
@@ -60,13 +60,23 @@ CREATE TABLE Carro (
 );
 
 CREATE TABLE Transporta (
-    data DATE,
-    hora TIME,
+    data TIMESTAMP,
     placa_carro VARCHAR2(7),
     cpf_mot VARCHAR2(11),
     cpf_falec VARCHAR2(11),
     PRIMARY KEY (data),
     FOREIGN KEY (placa_carro) REFERENCES Carro(placa),
     FOREIGN KEY (cpf_mot) REFERENCES Motorista(cpf_mot),
+    FOREIGN KEY (cpf_falec) REFERENCES Falecido(cpf_falec)
+);
+
+CREATE TABLE Contrata (
+    cpf_cliente VARCHAR2(11),
+    cpf_falec VARCHAR2(11),
+    id_funeral INTEGER,
+    data DATE,
+    PRIMARY KEY (id_funeral),
+    FOREIGN KEY (id_funeral) REFERENCES Funeral(id),
+    FOREIGN KEY (cpf_cliente) REFERENCES Cliente(cpf_cliente),
     FOREIGN KEY (cpf_falec) REFERENCES Falecido(cpf_falec)
 );
