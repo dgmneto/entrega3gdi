@@ -60,7 +60,7 @@ CREATE TABLE Carro (
 );
 
 CREATE TABLE Transporta (
-    data TIMESTAMP,
+    data DATE,
     placa_carro VARCHAR2(7),
     cpf_mot VARCHAR2(11),
     cpf_falec VARCHAR2(11),
@@ -83,7 +83,7 @@ CREATE TABLE Contrata (
 
 CREATE TABLE Funeral (
     id INTEGER,
-    data TIMESTAMP,
+    data DATE,
     PRIMARY KEY (id)
 );
 
@@ -133,4 +133,13 @@ CREATE TABLE Telefones (
     cpf_pessoa VARCHAR2(11),
     PRIMARY KEY (numero),
     FOREIGN KEY (cpf_pessoa) REFERENCES Pessoa(cpf)
+);
+
+CREATE TABLE Convidado (
+    id_convidado INTEGER,
+    prim_nome VARCHAR2(100),
+    nome_familia VARCHAR2(100),
+    id_funeral INTEGER,
+    PRIMARY KEY (id_convidado),
+    FOREIGN KEY (id_funeral) REFERENCES Contrata (id_funeral)
 );
