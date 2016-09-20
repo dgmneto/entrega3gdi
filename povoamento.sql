@@ -79,15 +79,15 @@ INSERT INTO Cliente (cpf_cliente) VALUES ('90909090909');
 INSERT INTO Cliente (cpf_cliente) VALUES ('12121212121');
 
 -- Funcionarios
-INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('13131313131', '14141414141');
-INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('14141414141', '15151515151');
-INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('15151515151', '16161616161');
-INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('16161616161', '17171717171');
-INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('17171717171', '18181818181');
-INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('18181818181', '19191919191');
-INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('19191919191', '23232323232');
-INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('23232323232', '24242424242');
-INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('24242424242', '25252525252');
+INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('13131313131', NULL);
+INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('14141414141', '13131313131');
+INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('15151515151', '13131313131');
+INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('16161616161', '13131313131');
+INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('17171717171', '13131313131');
+INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('18181818181', '13131313131');
+INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('19191919191', '13131313131');
+INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('23232323232', '13131313131');
+INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('24242424242', '13131313131');
 INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('25252525252', '13131313131');
 
 -- Cargos
@@ -144,10 +144,10 @@ INSERT INTO Carro (placa, ano_fab, fabricante, modelo, cor) VALUES ('RES8888', T
 INSERT INTO Transporta (data, placa_carro, cpf_mot, cpf_falec) VALUES (TO_DATE('01/01/2016 12:00:33', 'MM/DD/YYYY hh24:mi:ss'), 'PGA5069', '12323456352', '26262626262');
 INSERT INTO Transporta (data, placa_carro, cpf_mot, cpf_falec) VALUES (TO_DATE('02/02/2016 12:00:33', 'MM/DD/YYYY hh24:mi:ss'), 'PGA3169', '23452346345', '27272727272');
 INSERT INTO Transporta (data, placa_carro, cpf_mot, cpf_falec) VALUES (TO_DATE('03/03/2016 12:00:33', 'MM/DD/YYYY hh24:mi:ss'), 'KHX3009', '76575456777', '28282828282');
-INSERT INTO Transporta (data, placa_carro, cpf_mot, cpf_falec) VALUES (TO_DATE('03/03/2016 12:00:33', 'MM/DD/YYYY hh24:mi:ss'), 'KHX3129', '87567856787', '29292929292');
-INSERT INTO Transporta (data, placa_carro, cpf_mot, cpf_falec) VALUES (TO_DATE('03/03/2016 12:00:33', 'MM/DD/YYYY hh24:mi:ss'), 'PEQ1229', '00023455435', '34343434343');
+INSERT INTO Transporta (data, placa_carro, cpf_mot, cpf_falec) VALUES (TO_DATE('03/03/2015 12:00:33', 'MM/DD/YYYY hh24:mi:ss'), 'KHX3129', '87567856787', '29292929292');
+INSERT INTO Transporta (data, placa_carro, cpf_mot, cpf_falec) VALUES (TO_DATE('03/03/2014 12:00:33', 'MM/DD/YYYY hh24:mi:ss'), 'PEQ1229', '00023455435', '34343434343');
 INSERT INTO Transporta (data, placa_carro, cpf_mot, cpf_falec) VALUES (TO_DATE('04/04/2016 12:00:33', 'MM/DD/YYYY hh24:mi:ss'), 'KKK1111', '13452432222', '35353535353');
-INSERT INTO Transporta (data, placa_carro, cpf_mot, cpf_falec) VALUES (TO_DATE('04/04/2016 12:00:33', 'MM/DD/YYYY hh24:mi:ss'), 'XXX2345', '65543655536', '36363636363');
+INSERT INTO Transporta (data, placa_carro, cpf_mot, cpf_falec) VALUES (TO_DATE('04/04/2015 12:00:33', 'MM/DD/YYYY hh24:mi:ss'), 'XXX2345', '65543655536', '36363636363');
 INSERT INTO Transporta (data, placa_carro, cpf_mot, cpf_falec) VALUES (TO_DATE('05/05/2016 12:00:33', 'MM/DD/YYYY hh24:mi:ss'), 'XXT2342', '12376845432', '37373737373');
 INSERT INTO Transporta (data, placa_carro, cpf_mot, cpf_falec) VALUES (TO_DATE('06/05/2016 12:00:33', 'MM/DD/YYYY hh24:mi:ss'), 'PTR1234', '58746735663', '38383838383');
 INSERT INTO Transporta (data, placa_carro, cpf_mot, cpf_falec) VALUES (TO_DATE('06/06/2016 12:00:33', 'MM/DD/YYYY hh24:mi:ss'), 'RES8888', '23455664764', '39393939393');
@@ -277,7 +277,7 @@ INSERT INTO Telefones (numero, cpf_pessoa) VALUES ('99787372', '00023455435');
 INSERT INTO Telefones (numero, cpf_pessoa) VALUES ('99912115', '13452432222');
 INSERT INTO Telefones (numero, cpf_pessoa) VALUES ('99918373', '65543655536');
 INSERT INTO Telefones (numero, cpf_pessoa) VALUES ('99981955', '12376845432');
-INSERT INTO Telefones (numero, cpf_pessoa) VALUES ('99916512', '58746735663');
+INSERT INTO Telefones (numero, cpf_pessoa) VALUES ('99916513', '58746735663');
 INSERT INTO Telefones (numero, cpf_pessoa) VALUES ('99984160', '23455664764');
 INSERT INTO Telefones (numero, cpf_pessoa) VALUES ('99988672', '12312312312');
 INSERT INTO Telefones (numero, cpf_pessoa) VALUES ('99913000', '10101010101');
@@ -297,3 +297,5 @@ INSERT INTO Convidado (id_convidado, prim_nome, nome_familia, id_funeral) VALUES
 INSERT INTO Convidado (id_convidado, prim_nome, nome_familia, id_funeral) VALUES (08, 'Renata', 'Santana', 08);
 INSERT INTO Convidado (id_convidado, prim_nome, nome_familia, id_funeral) VALUES (09, 'Maria', 'Abreu', 09);
 INSERT INTO Convidado (id_convidado, prim_nome, nome_familia, id_funeral) VALUES (10, 'Clara', 'Silva', 10);
+
+COMMIT;
