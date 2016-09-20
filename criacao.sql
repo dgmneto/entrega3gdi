@@ -16,12 +16,12 @@ CREATE TABLE Motorista (
 
 CREATE TABLE Cliente (
     cpf_cliente VARCHAR2(11),
-    PRIMARY KEY (cpf_cliente), 
+    PRIMARY KEY (cpf_cliente),
     FOREIGN KEY (cpf_cliente) REFERENCES Pessoa(cpf)
 );
 
 CREATE TABLE Funcionario (
-    cpf_func VARCHAR2(11), 
+    cpf_func VARCHAR2(11),
     cpf_supv VARCHAR2(11), --supervisor
     PRIMARY KEY (cpf_func),
     FOREIGN KEY (cpf_func) REFERENCES Pessoa(cpf),
@@ -29,7 +29,7 @@ CREATE TABLE Funcionario (
 );
 
 CREATE TABLE Cargo (
-    funcao VARCHAR2(14),
+    funcao VARCHAR2(27),
     cpf_func VARCHAR2(11),
     PRIMARY KEY (funcao),
     FOREIGN KEY (cpf_func) REFERENCES Funcionario(cpf_func)
@@ -37,7 +37,7 @@ CREATE TABLE Cargo (
 
 CREATE TABLE Remuneracao (
     salario DECIMAL(6, 2),
-    funcao VARCHAR2(14),
+    funcao VARCHAR2(27),
     PRIMARY KEY (salario),
     FOREIGN KEY (funcao) REFERENCES Cargo(funcao)
 );
@@ -45,8 +45,8 @@ CREATE TABLE Remuneracao (
 CREATE TABLE Falecido (
     cpf_falec VARCHAR2(11),
     data_obito DATE,
-    altura DECIMAL(1,2),
-    largura DECIMAL(1,2),
+    altura DECIMAL(3,2),
+    largura DECIMAL(3,2),
     PRIMARY KEY (cpf_falec) REFERENCES Pessoa(cpf)
 );
 
@@ -100,8 +100,8 @@ CREATE TABLE Cremacao (
 );
 
 CREATE TABLE Produto (
-    num_serie VARCHAR2(100),
-    preco DECIMAL(6, 2),
+    num_serie VARCHAR2(4),
+    preco DECIMAL(5, 2),
     cor VARCHAR2(30),
     fabricante VARCHAR2(100),
     PRIMARY KEY (num_serie)
@@ -110,7 +110,7 @@ CREATE TABLE Produto (
 CREATE TABLE Urna (
     num_serie VARCHAR2(100),
     peso DECIMAL(6, 2),
-    volume DECIMAL(6, 2),
+    volume DECIMAL(4, 2),
     id_funeral INTEGER,
     PRIMARY KEY (num_serie),
     FOREIGN KEY (num_serie) REFERENCES Produto(num_serie),
@@ -119,8 +119,8 @@ CREATE TABLE Urna (
 
 CREATE TABLE Caixao (
     num_serie VARCHAR2(100),
-    altura DECIMAL(6, 2),
-    largura DECIMAL(6, 2),
+    altura DECIMAL(3, 2),
+    largura DECIMAL(3, 2),
     revestimento VARCHAR2(100),
     id_funeral INTEGER,
     PRIMARY KEY (num_serie),
