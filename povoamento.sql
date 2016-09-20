@@ -1,6 +1,6 @@
 -- Pessoas
 
-    # Pessoas Motoristas
+    -- Pessoas Motoristas
 
 INSERT INTO Pessoa (cpf, prim_nome, nome_familia, data_nasc, rg) VALUES ('12323456352', 'Pedro', 'Rossi', TO_DATE('12/03/1998', 'MM/DD/YYYY'), '123456789');
 INSERT INTO Pessoa (cpf, prim_nome, nome_familia, data_nasc, rg) VALUES ('23452346345', 'Joao', 'Silveira', TO_DATE('01/04/1997', 'MM/DD/YYYY'), '123111789');
@@ -14,7 +14,7 @@ INSERT INTO Pessoa (cpf, prim_nome, nome_familia, data_nasc, rg) VALUES ('587467
 INSERT INTO Pessoa (cpf, prim_nome, nome_familia, data_nasc, rg) VALUES ('23455664764', 'Gabriel', 'Feitosa', TO_DATE('09/01/1989', 'MM/DD/YYYY'), '101101101');
 INSERT INTO Pessoa (cpf, prim_nome, nome_familia, data_nasc, rg) VALUES ('12312312312', 'Pedro', 'Higor', TO_DATE('12/03/1998', 'MM/DD/YYYY'), '202202202');
 
-    # Pessoas Clientes
+    -- Pessoas Clientes
 
 INSERT INTO Pessoa (cpf, prim_nome, nome_familia, data_nasc, rg) VALUES ('10101010101', 'Joao', 'Silveirao', TO_DATE('01/04/1997', 'MM/DD/YYYY'), '303303303');
 INSERT INTO Pessoa (cpf, prim_nome, nome_familia, data_nasc, rg) VALUES ('20202020202', 'Lucas', 'Lucas', TO_DATE('02/05/1996', 'MM/DD/YYYY'), '404404404');
@@ -27,7 +27,7 @@ INSERT INTO Pessoa (cpf, prim_nome, nome_familia, data_nasc, rg) VALUES ('808080
 INSERT INTO Pessoa (cpf, prim_nome, nome_familia, data_nasc, rg) VALUES ('90909090909', 'Gabriel', 'Gervasio', TO_DATE('09/01/1989', 'MM/DD/YYYY'), '313313313');
 INSERT INTO Pessoa (cpf, prim_nome, nome_familia, data_nasc, rg) VALUES ('12121212121', 'Pedro', 'Filho', TO_DATE('12/03/1998', 'MM/DD/YYYY'), '414414414');
 
-    # Pessoas Funcionarios
+    -- Pessoas Funcionarios
 
 INSERT INTO Pessoa (cpf, prim_nome, nome_familia, data_nasc, rg) VALUES ('13131313131', 'Joao', 'Barbosa', TO_DATE('01/04/1997', 'MM/DD/YYYY'), '515515515');
 INSERT INTO Pessoa (cpf, prim_nome, nome_familia, data_nasc, rg) VALUES ('14141414141', 'Lucas', 'Hitallo', TO_DATE('02/05/1996', 'MM/DD/YYYY'), '616616616');
@@ -40,7 +40,7 @@ INSERT INTO Pessoa (cpf, prim_nome, nome_familia, data_nasc, rg) VALUES ('232323
 INSERT INTO Pessoa (cpf, prim_nome, nome_familia, data_nasc, rg) VALUES ('24242424242', 'Gabriel', 'Ribeiro', TO_DATE('09/01/1989', 'MM/DD/YYYY'), '626626626');
 INSERT INTO Pessoa (cpf, prim_nome, nome_familia, data_nasc, rg) VALUES ('25252525252', 'Pedro', 'Ricardo', TO_DATE('12/03/1998', 'MM/DD/YYYY'), '727727727');
 
-    # Pessoas Falecidos
+    -- Pessoas Falecidos
 
 INSERT INTO Pessoa (cpf, prim_nome, nome_familia, data_nasc, rg) VALUES ('26262626262', 'Joao', 'Cavalcanti', TO_DATE('01/04/1997', 'MM/DD/YYYY'), '828828828');
 INSERT INTO Pessoa (cpf, prim_nome, nome_familia, data_nasc, rg) VALUES ('27272727272', 'Lucas', 'Santana', TO_DATE('02/05/1996', 'MM/DD/YYYY'), '929929929');
@@ -152,21 +152,9 @@ INSERT INTO Transporta (data, placa_carro, cpf_mot, cpf_falec) VALUES (TO_DATE('
 INSERT INTO Transporta (data, placa_carro, cpf_mot, cpf_falec) VALUES (TO_DATE('06/05/2016 12:00:33', 'MM/DD/YYYY hh24:mi:ss'), 'PTR1234', '58746735663', '38383838383');
 INSERT INTO Transporta (data, placa_carro, cpf_mot, cpf_falec) VALUES (TO_DATE('06/06/2016 12:00:33', 'MM/DD/YYYY hh24:mi:ss'), 'RES8888', '23455664764', '39393939393');
 
--- Contrata
-INSERT INTO Contrata (cpf_cliente, cpf_falec, id_funeral, data) VALUES ('10101010101', '26262626262', 01, TO_DATE('04/04/2016', 'MM/DD/YYYY'));
-INSERT INTO Contrata (cpf_cliente, cpf_falec, id_funeral, data) VALUES ('20202020202', '27272727272', 02, TO_DATE('01/01/2016', 'MM/DD/YYYY'));
-INSERT INTO Contrata (cpf_cliente, cpf_falec, id_funeral, data) VALUES ('30303030303', '28282828282', 03, TO_DATE('02/02/2016', 'MM/DD/YYYY'));
-INSERT INTO Contrata (cpf_cliente, cpf_falec, id_funeral, data) VALUES ('40404040404', '29292929292', 04, TO_DATE('03/03/2016', 'MM/DD/YYYY'));
-INSERT INTO Contrata (cpf_cliente, cpf_falec, id_funeral, data) VALUES ('50505050505', '34343434343', 05, TO_DATE('05/05/2016', 'MM/DD/YYYY'));
-INSERT INTO Contrata (cpf_cliente, cpf_falec, id_funeral, data) VALUES ('60606060606', '35353535353', 06, TO_DATE('06/06/2016', 'MM/DD/YYYY'));
-INSERT INTO Contrata (cpf_cliente, cpf_falec, id_funeral, data) VALUES ('70707070707', '36363636363', 07, TO_DATE('07/07/2016', 'MM/DD/YYYY'));
-INSERT INTO Contrata (cpf_cliente, cpf_falec, id_funeral, data) VALUES ('80808080808', '37373737373', 08, TO_DATE('08/08/2016', 'MM/DD/YYYY'));
-INSERT INTO Contrata (cpf_cliente, cpf_falec, id_funeral, data) VALUES ('90909090909', '38383838383', 09, TO_DATE('09/09/2016', 'MM/DD/YYYY'));
-INSERT INTO Contrata (cpf_cliente, cpf_falec, id_funeral, data) VALUES ('12121212121', '39393939393', 10, TO_DATE('10/10/2016', 'MM/DD/YYYY'));
-
 -- Funeral
 
-    # Funeral Enterro
+    -- Funeral Enterro
 
 INSERT INTO Funeral (id, data) VALUES (01, TO_DATE('03/02/1987', 'MM/DD/YYYY'));
 INSERT INTO Funeral (id, data) VALUES (02, TO_DATE('04/08/1990', 'MM/DD/YYYY'));
@@ -179,7 +167,7 @@ INSERT INTO Funeral (id, data) VALUES (08, TO_DATE('10/12/2004', 'MM/DD/YYYY'));
 INSERT INTO Funeral (id, data) VALUES (09, TO_DATE('11/09/2005', 'MM/DD/YYYY'));
 INSERT INTO Funeral (id, data) VALUES (10, TO_DATE('12/30/2006', 'MM/DD/YYYY'));
 
-    #Funeral Cremacao
+    --Funeral Cremacao
 
 INSERT INTO Funeral (id, data) VALUES (11, TO_DATE('08/07/2007', 'MM/DD/YYYY'));
 INSERT INTO Funeral (id, data) VALUES (12, TO_DATE('05/14/2008', 'MM/DD/YYYY'));
@@ -216,33 +204,45 @@ INSERT INTO Cremacao (id_funeral) VALUES (18);
 INSERT INTO Cremacao (id_funeral) VALUES (19);
 INSERT INTO Cremacao (id_funeral) VALUES (20);
 
+-- Contrata
+INSERT INTO Contrata (cpf_cliente, cpf_falec, id_funeral, data) VALUES ('10101010101', '26262626262', 01, TO_DATE('04/04/2016', 'MM/DD/YYYY'));
+INSERT INTO Contrata (cpf_cliente, cpf_falec, id_funeral, data) VALUES ('20202020202', '27272727272', 02, TO_DATE('01/01/2016', 'MM/DD/YYYY'));
+INSERT INTO Contrata (cpf_cliente, cpf_falec, id_funeral, data) VALUES ('30303030303', '28282828282', 03, TO_DATE('02/02/2016', 'MM/DD/YYYY'));
+INSERT INTO Contrata (cpf_cliente, cpf_falec, id_funeral, data) VALUES ('40404040404', '29292929292', 04, TO_DATE('03/03/2016', 'MM/DD/YYYY'));
+INSERT INTO Contrata (cpf_cliente, cpf_falec, id_funeral, data) VALUES ('50505050505', '34343434343', 05, TO_DATE('05/05/2016', 'MM/DD/YYYY'));
+INSERT INTO Contrata (cpf_cliente, cpf_falec, id_funeral, data) VALUES ('60606060606', '35353535353', 06, TO_DATE('06/06/2016', 'MM/DD/YYYY'));
+INSERT INTO Contrata (cpf_cliente, cpf_falec, id_funeral, data) VALUES ('70707070707', '36363636363', 07, TO_DATE('07/07/2016', 'MM/DD/YYYY'));
+INSERT INTO Contrata (cpf_cliente, cpf_falec, id_funeral, data) VALUES ('80808080808', '37373737373', 08, TO_DATE('08/08/2016', 'MM/DD/YYYY'));
+INSERT INTO Contrata (cpf_cliente, cpf_falec, id_funeral, data) VALUES ('90909090909', '38383838383', 09, TO_DATE('09/09/2016', 'MM/DD/YYYY'));
+INSERT INTO Contrata (cpf_cliente, cpf_falec, id_funeral, data) VALUES ('12121212121', '39393939393', 10, TO_DATE('10/10/2016', 'MM/DD/YYYY'));
+
 -- Produto
 
-    # Produto Urna
+    -- Produto Urna
 
-INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1234', 100.20, "Branco", "São Gonçalo");
-INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1235', 101.20, "Preto", "Faurtil");
-INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1236', 102.25, "Azul", "JBS");
-INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1237', 120.31, "Cinza", "São Gonçalo");
-INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1238', 121.30, "Preto", "Faurtil");
-INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1239', 122.30, "Azul", "JBS");
-INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1240', 135.06, "Branco", "São Gonçalo");
-INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1241', 136.00, "Preto", "Faurtil");
-INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1242', 137.00, "Cinza", "JBS");
-INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1243', 140.29, "Branco", "São Gonçalo");
+INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1234', 100.20, 'Branco', 'São Gonçalo');
+INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1235', 101.20, 'Preto', 'Faurtil');
+INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1236', 102.25, 'Azul', 'JBS');
+INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1237', 120.31, 'Cinza', 'São Gonçalo');
+INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1238', 121.30, 'Preto', 'Faurtil');
+INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1239', 122.30, 'Azul', 'JBS');
+INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1240', 135.06, 'Branco', 'São Gonçalo');
+INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1241', 136.00, 'Preto', 'Faurtil');
+INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1242', 137.00, 'Cinza', 'JBS');
+INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1243', 140.29, 'Branco', 'São Gonçalo');
 
-    # Produto Caixao
+    -- Produto Caixao
 
-INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1244', 141.20, "Preto", "Faurtil");
-INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1245', 142.20, "Azul", "JBS");
-INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1246', 156.55, "Branco", "São Gonçalo");
-INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1247', 189.90, "Cinza", "Faurtil");
-INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1248', 102.20, "Azul", "JBS");
-INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1249', 100.20, "Branco", "São Gonçalo");
-INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1250', 101.20, "Preto", "Faurtil");
-INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1251', 102.20, "Azul", "JBS");
-INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1252', 100.20, "Branco", "São Gonçalo");
-INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1253', 101.20, "Preto", "Faurtil");
+INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1244', 141.20, 'Preto', 'Faurtil');
+INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1245', 142.20, 'Azul', 'JBS');
+INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1246', 156.55, 'Branco', 'São Gonçalo');
+INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1247', 189.90, 'Cinza', 'Faurtil');
+INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1248', 102.20, 'Azul', 'JBS');
+INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1249', 100.20, 'Branco', 'São Gonçalo');
+INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1250', 101.20, 'Preto', 'Faurtil');
+INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1251', 102.20, 'Azul', 'JBS');
+INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1252', 100.20, 'Branco', 'São Gonçalo');
+INSERT INTO Produto (num_serie, preco, cor, fabricante) VALUES ('1253', 101.20, 'Preto', 'Faurtil');
 
 -- Urna
 INSERT INTO Urna (num_serie, peso, volume, id_funeral) VALUES ('1234', 1000.00, 10.00, 01);
