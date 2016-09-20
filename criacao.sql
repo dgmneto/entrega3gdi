@@ -80,3 +80,22 @@ CREATE TABLE Contrata (
     FOREIGN KEY (cpf_cliente) REFERENCES Cliente(cpf_cliente),
     FOREIGN KEY (cpf_falec) REFERENCES Falecido(cpf_falec)
 );
+
+CREATE TABLE Funeral (
+    id INTEGER,
+    data TIMESTAMP,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE Enterro (
+    id_funeral INTEGER,
+    PRIMARY KEY (id_funeral),
+    FOREIGN KEY (id_funeral) REFERENCES Funeral (id)
+);
+
+CREATE TABLE Cremacao (
+    id_funeral INTEGER,
+    PRIMARY KEY (id_funeral),
+    FOREIGN KEY (id_funeral) REFERENCES Funeral (id)
+);
+
