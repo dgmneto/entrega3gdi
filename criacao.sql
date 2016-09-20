@@ -47,7 +47,8 @@ CREATE TABLE Falecido (
     data_obito DATE,
     altura DECIMAL(1,2),
     largura DECIMAL(1,2),
-    PRIMARY KEY (cpf_falec) REFERENCES Pessoa(cpf)
+    PRIMARY KEY (cpf_falec),
+    FOREIGN KEY (cpf_falec) REFERENCES Pessoa(cpf)
 );
 
 CREATE TABLE Carro (
@@ -70,6 +71,12 @@ CREATE TABLE Transporta (
     FOREIGN KEY (cpf_falec) REFERENCES Falecido(cpf_falec)
 );
 
+CREATE TABLE Funeral (
+    id INTEGER,
+    data DATE,
+    PRIMARY KEY (id)
+);
+
 CREATE TABLE Contrata (
     cpf_cliente VARCHAR2(11),
     cpf_falec VARCHAR2(11),
@@ -79,12 +86,6 @@ CREATE TABLE Contrata (
     FOREIGN KEY (id_funeral) REFERENCES Funeral(id),
     FOREIGN KEY (cpf_cliente) REFERENCES Cliente(cpf_cliente),
     FOREIGN KEY (cpf_falec) REFERENCES Falecido(cpf_falec)
-);
-
-CREATE TABLE Funeral (
-    id INTEGER,
-    data DATE,
-    PRIMARY KEY (id)
 );
 
 CREATE TABLE Enterro (
