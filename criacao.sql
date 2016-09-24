@@ -50,14 +50,14 @@ CREATE TABLE Funcionario (
 CREATE TABLE Cargo (
     funcao VARCHAR2(27),
     cpf_func VARCHAR2(11),
-    PRIMARY KEY (funcao),
+    PRIMARY KEY (cpf_func),
     FOREIGN KEY (cpf_func) REFERENCES Funcionario(cpf_func)
 );
 
 CREATE TABLE Remuneracao (
     salario DECIMAL(6, 2),
     funcao VARCHAR2(27),
-    PRIMARY KEY (salario),
+    PRIMARY KEY (funcao),
     FOREIGN KEY (funcao) REFERENCES Cargo(funcao)
 );
 
