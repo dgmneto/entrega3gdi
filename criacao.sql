@@ -47,18 +47,18 @@ CREATE TABLE Funcionario (
     FOREIGN KEY (cpf_supv) REFERENCES Funcionario(cpf_func)
 );
 
-CREATE TABLE Cargo (
-    funcao VARCHAR2(27),
-    cpf_func VARCHAR2(11),
-    PRIMARY KEY (funcao),
-    FOREIGN KEY (cpf_func) REFERENCES Funcionario(cpf_func)
-);
-
 CREATE TABLE Remuneracao (
     salario DECIMAL(6, 2),
     funcao VARCHAR2(27),
-    PRIMARY KEY (salario),
-    FOREIGN KEY (funcao) REFERENCES Cargo(funcao)
+    PRIMARY KEY (funcao)
+);
+
+CREATE TABLE Cargo (
+    funcao VARCHAR2(27),
+    cpf_func VARCHAR2(11),
+    PRIMARY KEY (cpf_func),
+    FOREIGN KEY (cpf_func) REFERENCES Funcionario(cpf_func),
+    FOREIGN KEY (funcao) REFERENCES Remuneracao(funcao)
 );
 
 CREATE TABLE Falecido (
