@@ -90,18 +90,6 @@ INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('23232323232', '13131313131
 INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('24242424242', '13131313131');
 INSERT INTO Funcionario (cpf_func, cpf_supv) VALUES ('25252525252', '13131313131');
 
--- Cargos
-INSERT INTO Cargo (funcao, cpf_func) VALUES ('Gerente de vendas', '13131313131');
-INSERT INTO Cargo (funcao, cpf_func) VALUES ('Recepcionista', '14141414141');
-INSERT INTO Cargo (funcao, cpf_func) VALUES ('Servicos Gerais', '15151515151');
-INSERT INTO Cargo (funcao, cpf_func) VALUES ('Secretario', '16161616161');
-INSERT INTO Cargo (funcao, cpf_func) VALUES ('Motorista', '17171717171');
-INSERT INTO Cargo (funcao, cpf_func) VALUES ('Mostrador', '18181818181');
-INSERT INTO Cargo (funcao, cpf_func) VALUES ('Supervisor de vendas', '19191919191');
-INSERT INTO Cargo (funcao, cpf_func) VALUES ('Gerente de marketing', '23232323232');
-INSERT INTO Cargo (funcao, cpf_func) VALUES ('Gerente de recursos humanos', '24242424242');
-INSERT INTO Cargo (funcao, cpf_func) VALUES ('Gerente de TI', '25252525252');
-
 -- Remuneracao
 INSERT INTO Remuneracao (salario, funcao) VALUES (1200.00, 'Gerente de vendas');
 INSERT INTO Remuneracao (salario, funcao) VALUES (1100.00, 'Recepcionista');
@@ -113,6 +101,18 @@ INSERT INTO Remuneracao (salario, funcao) VALUES (2100.00, 'Supervisor de vendas
 INSERT INTO Remuneracao (salario, funcao) VALUES (3500.00, 'Gerente de marketing');
 INSERT INTO Remuneracao (salario, funcao) VALUES (3340.20, 'Gerente de recursos humanos');
 INSERT INTO Remuneracao (salario, funcao) VALUES (2101.12, 'Gerente de TI');
+
+-- Cargos
+INSERT INTO Cargo (funcao, cpf_func) VALUES ('Gerente de vendas', '13131313131');
+INSERT INTO Cargo (funcao, cpf_func) VALUES ('Recepcionista', '14141414141');
+INSERT INTO Cargo (funcao, cpf_func) VALUES ('Servicos Gerais', '15151515151');
+INSERT INTO Cargo (funcao, cpf_func) VALUES ('Secretario', '16161616161');
+INSERT INTO Cargo (funcao, cpf_func) VALUES ('Motorista', '17171717171');
+INSERT INTO Cargo (funcao, cpf_func) VALUES ('Mostrador', '18181818181');
+INSERT INTO Cargo (funcao, cpf_func) VALUES ('Supervisor de vendas', '19191919191');
+INSERT INTO Cargo (funcao, cpf_func) VALUES ('Gerente de marketing', '23232323232');
+INSERT INTO Cargo (funcao, cpf_func) VALUES ('Gerente de recursos humanos', '24242424242');
+INSERT INTO Cargo (funcao, cpf_func) VALUES ('Gerente de TI', '25252525252');
 
 -- Falecido
 INSERT INTO Falecido (cpf_falec, data_obito, altura, largura) VALUES ('26262626262', TO_DATE('01/18/1901', 'MM/DD/YYYY'), 1.83, 0.45);
